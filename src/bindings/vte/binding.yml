@@ -1,0 +1,5 @@
+namespace: Vte
+version: "3.91"
+
+require_after:
+- terminal.cr
