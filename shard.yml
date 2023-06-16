@@ -7,6 +7,7 @@ authors:
 dependencies:
  gtk4:
    github: hugopl/gtk4.cr
+   branch: main
 
 crystal: 1.8.2
 
