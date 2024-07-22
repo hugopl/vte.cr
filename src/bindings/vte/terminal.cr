@@ -8,6 +8,10 @@ module Vte
       LibVte.vte_terminal_feed_child(to_unsafe, data, data.bytesize)
     end
 
+    def set_colors(foreground : Gdk::RGBA, background : Gdk::RGBA, palette : Array(Gdk::RGBA)) : Nil
+      LibVte.vte_terminal_set_colors(to_unsafe, foreground, background, palette.to_unsafe.as(Pointer(LibGdk::RGBA)), palette.size)
+    end
+
     # Workaround for https://gitlab.gnome.org/GNOME/vte/-/issues/2794
     struct HyperlinkHoverUriChangedSignal < GObject::Signal
       def connect(handler : Proc(::String?, Gdk::Rectangle?, Nil), *, after : Bool = false) : GObject::SignalConnection

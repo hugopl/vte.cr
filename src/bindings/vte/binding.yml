@@ -3,3 +3,9 @@ version: "3.91"
 
 require_after:
 - terminal.cr
+
+types:
+  Terminal:
+    ignore_methods:
+    - set_colors
+
