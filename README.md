@@ -19,7 +19,7 @@
 ```crystal
 require "vte"
 
-class App < Gtk::Application
+class BasicTerminalApp < Gtk::Application
   @[GObject::Virtual]
   def activate
     window = Gtk::ApplicationWindow.new(self)
